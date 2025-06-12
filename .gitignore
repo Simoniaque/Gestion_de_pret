@@ -1,0 +1,43 @@
+# Environnement virtuel (à adapter si ton dossier s'appelle différemment)
+venv/
+env/
+ENV/
+.venv/
+.python-version
+
+# Fichiers Python compilés
+__pycache__/
+*.py[cod]
+*$py.class
+
+# SQLite DB (si utilisée)
+*.sqlite3
+
+# Fichiers/Dossiers temporaires
+*.log
+*.pot
+*.pyc
+*.pyo
+*.swp
+*.bak
+*.tmp
+*.orig
+
+# Django stuff:
+db.sqlite3
+media/
+staticfiles/
+local_settings.py
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# macOS / Windows
+.DS_Store
+Thumbs.db
+
+# Fichiers de migrations inutiles (optionnel, à activer avec prudence)
+# Si tu veux tout commit sauf les migrations initiales, tu peux décommenter :
+# */migrations/*.py
+# !*/migrations/__init__.py

@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+
+{% block content %}
+<h2>Historique des emprunts</h2>
+<table border="1">
+    <tr>
+        <th>Matériel</th>
+        <th>De</th>
+        <th>À</th>
+        <th>Date</th>
+        <th>Lieu</th>
+        <th>Objectif</th>
+    </tr>
+    {% for e in emprunts %}
+    <tr>
+        <td>{{ e.materiel.nom }}</td>
+        <td>{{ e.ancien_possesseur }}</td>
+        <td>{{ e.nouveau_possesseur }}</td>
+        <td>{{ e.date|date:"d/m/Y H:i" }}</td>
+        <td>{{ e.lieu }}</td>
+        <td>{{ e.objectif_utilisation }}</td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="6">Aucun emprunt enregistré</td></tr>
+    {% endfor %}
+</table>
+{% endblock %}

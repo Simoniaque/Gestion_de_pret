@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+
+{% block content %}
+<h2>Liste des enseignants</h2>
+<ul>
+    {% for enseignant in enseignants %}
+        <li>{{ enseignant.nom }} {{ enseignant.prenom }} - {{ enseignant.email }}</li>
+    {% empty %}
+        <li>Aucun enseignant enregistré</li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+
+{% block content %}
+<h2>Matériels par salle</h2>
+{% for salle in salles %}
+    <h3>{{ salle }}</h3>
+    <ul>
+        {% for materiel in salle.materiel_set.all %}
+            <li>{{ materiel.nom }} (Responsable : {{ materiel.responsable }})</li>
+        {% empty %}
+            <li>Aucun matériel dans cette salle</li>
+        {% endfor %}
+    </ul>
+{% endfor %}
+{% endblock %}

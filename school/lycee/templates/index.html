@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion des matériels</title>
+</head>
+<body>
+    <h1>Application de prêt de matériel</h1>
+
+    <nav>
+        <strong>Matériel :</strong>
+        <a href="{% url 'liste_materiels' %}">Liste</a> |
+        <a href="{% url 'ajouter_materiel' %}">Ajouter Materiel</a> |
+        <a href="{% url 'ajouter_accessoire' %}">Ajouter Accessoire</a> |
+        <a href="{% url 'materiels_par_salle' %}">Par salle</a> |
+        <a href="{% url 'enregistrer_emprunt' %}">Nouvel emprunt</a>
+        <br>
+
+        <strong>Enseignants :</strong>
+        <a href="{% url 'liste_enseignants' %}">Liste</a> |
+        <a href="{% url 'ajouter_enseignant' %}">Ajouter</a>
+        <br>
+
+        <strong>Autres :</strong>
+        <a href="{% url 'historique_emprunts' %}">Historique des emprunts</a>
+    </nav>
+
+    <hr>
+
+    {% block content %}
+    <!-- Contenu spécifique des pages filles -->
+    {% endblock %}
+</body>
+</html>
+
